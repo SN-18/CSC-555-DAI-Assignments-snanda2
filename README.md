@@ -1,2 +1,5 @@
-# CSC-555-DAI-Assignments-snanda2
-CSC-555 Social Computing and DAI Assignments
+# Prosociality and Social Network Analysis 
+## CSC-555 || Social Computing and DAI-Assignment P1 || snanda2
+
+
+Lorem Ipsum Dolor Sit Amet Consecteur Adipiscing Elit
