@@ -9,9 +9,19 @@ Libraries used:
 Package: SNAP
 cliques.h
 
-##Instructions to execute
+## Instructions to execute
 
-##Requirements
+## Requirements
+- Python 3.X : Check for requirements using:
+
+For Linux and mac-OS X, open Terminal and type:
+```python --version```
+
+For Windows open cmd or powershell and type:
+```python3 --version```
+
+If it's not present, information for downloading and installation can be found at [python.org](https://www.python.org/downloads/):
+
 
 
 Lorem Ipsum Dolor Sit Amet Consecteur Adipiscing Elit
