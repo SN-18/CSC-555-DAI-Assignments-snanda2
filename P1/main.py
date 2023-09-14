@@ -187,7 +187,7 @@ def ego_graph(G, n, radius=1, sample=-1.0, traversal='in', copy_attr=True):
                         raise RuntimeError
                     else:
                         snapGraph = snap.GetInEgonetSubAttr(G._graph, n, radius, sample, -1.0)
-                        return nx.nx.nx.sx.Graph(incoming_graph_data=snapGraph)
+                        return nx.sx.Graph(incoming_graph_data=snapGraph)
                 else:
                     if not 0.0 <= sample <= 1.0:
                         raise RuntimeError
