@@ -3,6 +3,7 @@
 
 import networkx as nx
 
+# import clique.h
 import numpy as np
 from collections import Counter
 import matplotlib.pyplot as plt
@@ -98,7 +99,7 @@ with open('gPlus_combined.txt') as f:
         #     print("n,m",n,m)
         #
 
-        n = li[0]
+        n = int(li[0])
         node_dict[n] = counter
         counter = counter + 1
 
@@ -115,8 +116,24 @@ with open('gPlus_combined.txt') as f:
             # print("type of argument",type(m))
 
 #let's wait a moment, will create edges li later.
-        for n, m in enumerate(li):
-            G1.AddEdge(node_dict(n), node_dict(m))
+        n = int(li[0])
+        m = int(li[1])
+
+
+
+
+        try:
+            n_int = node_dict[n]
+            m_int = node_dict[m]
+            print("successfully added edge between nodes",n_int,m_int)
+            G1.AddEdge(n_int,m_int)
+        except:
+            print("For this edge, something happened, for now, let's debug")
+
+        # for n, m in enumerate(li):
+        #     G1.AddEdge(node_dict(n), node_dict(m))
+
+    nx.find_cliques(G1)
 
 
 
