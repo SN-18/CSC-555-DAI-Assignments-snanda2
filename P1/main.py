@@ -2,38 +2,41 @@
 # Aric A. Hagberg, Daniel A. Schult and Pieter J. Swart, “Exploring network structure, dynamics, and function using NetworkX”, in Proceedings of the 7th Python in Science Conference (SciPy2008), Gäel Varoquaux, Travis Vaught, and Jarrod Millman (Eds), (Pasadena, CA USA), pp. 11–15, Aug 2008
 
 import networkx as nx
+
 import numpy as np
 from collections import Counter
-
 import matplotlib.pyplot as plt
-
-
 import warnings
 warnings.filterwarnings("ignore")
-
 import snap
 
-v = snap.TIntV()
+
+
+# v = snap.TIntV()
+
 snap.TUNGraph.New()
 
+
+
 #testing append menthod for a TIntV graph, works.
-v.append(1)
-print(len(v))
+# v.append(1)
+# print(len(v))
 #end of testing it.
 
 
-
 with open('gPlus_combined.txt') as f:
+
     lines = f.readlines()             # list containing lines of file
     columns = []                      # To store column names
 
     i = 1
+
     G1 = snap.TNGraph.New()
 
-    G1.AddNode(1)
-    G1.AddNode(5)
-
-    G1.AddEdge(1, 5)
+    # G1.AddNode(1)
+    # G1.AddNode(5)
+    #
+    # G1.AddEdge(1, 5)
 
     print("printing G1, w u")
     print(G1)
@@ -68,38 +71,60 @@ with open('gPlus_combined.txt') as f:
                 #     v.append()
                 #     G1.AddNode(1)
 
-    print(data)
+#checking if data contains the node pairs, as coded, works perfectly.
+    # print(data)
 
-    G1.AddNode(5)
-    G1.AddNode(6)
-    G1.AddEdge(5, 6)
+#Testing creation of a small graph, works perfectly.
+    # G1.AddNode(100)
+    # G1.AddNode(200)
+    # G1.AddEdge(100, 200)
+    #
+    # print("G1 is",G1)
+
+
+    counter = 0
+    node_dict = dict()
 
     for li in data:
 
-        print("li is:", li)
+        # print("li is:", li)
 
         #To be debugged
+        # if counter<100:
+        #     print(li[0],li[1])
+        #     counter = counter + 1
 
-        for n,m in enumerate(li):
-            print("n,m",n,m)
+        # for n,m in enumerate(li):
+        #     print("n,m",n,m)
+        #
 
+        n = li[0]
+        node_dict[n] = counter
+        counter = counter + 1
 
-            G1.AddNode(int(n))
-            G1.AddNode(int(m))
+            # print("n is:",n)
 
-            print("type of argument",type(m))
+            # n_int = int(n)
+            # print(n_int//10)
 
+            # G1.AddNode(n_int//10)
+            # G1.AddNode(int(li[1]))
 
+        G1.AddNode(counter)
+
+            # print("type of argument",type(m))
+
+#let's wait a moment, will create edges li later.
         for n, m in enumerate(li):
-            G1.AddEdge(int(n), int(m))
+            G1.AddEdge(node_dict(n), node_dict(m))
 
 
 
 
-
-    for NI in G1.Nodes():
-        for Id in NI.GetOutEdges():
-            print("edge (%d %d)" %( NI.GetId(), Id))
+#let's wait a moment
+    # for NI in G1.Nodes():
+    #     for Id in NI.GetOutEdges():
+    #         print("edge (%d %d)" %( NI.GetId(), Id))
 
 
 
@@ -116,8 +141,69 @@ def prepare_data(data):
     return deg, cs
 
 
-def draw_plot(axcm, x, y, measures, typ, measure_name, xlabel, ylabel):
+def ego_graph(G, n, radius=1, sample=-1.0, traversal='in', copy_attr=True):
+    """PORTED FROM NETWORKX
+    Returns induced subgraph of neighbors centered at node n within
+    a given radius.
 
+    Parameters
+    ----------
+    G : graph
+      A NetworkX Graph or DiGraph
+
+    n : node
+      A single node
+
+    radius : number, optional
+      Include all neighbors of distance<=radius from n.
+
+    center : bool, optional - NOT ADDED
+      If False, do not include center node in graph
+
+    undirected : bool, optional - NOT ADDED
+      If True use both in- and out-neighbors of directed graphs.
+
+    distance : key, optional - NOT ADDED
+      Use specified edge data key as distance.  For example, setting
+      distance='weight' will use the edge weight to measure the
+      distance from the node n.
+
+    sample : int/float, optional
+      Number of nodes to sample as neighbors. Either positive int or float
+      between 0.0 and 1.0.
+
+    traversal : str, optional, either 'in', 'out', 'all'
+      Get in, out or both ego neighborhoods
+
+    copy_attr : bool, optional
+      Copy node and edge attributes to ego graph
+    """
+
+    if traversal == 'in':
+        if copy_attr:
+            if sample != -1.0:
+                if type(sample) is int:
+                    if 0 > sample:
+                        raise RuntimeError
+                    else:
+                        snapGraph = snap.GetInEgonetSubAttr(G._graph, n, radius, sample, -1.0)
+                        return nx.nx.nx.sx.Graph(incoming_graph_data=snapGraph)
+                else:
+                    if not 0.0 <= sample <= 1.0:
+                        raise RuntimeError
+                    else:
+                        snapGraph = snap.GetInEgonetSubAttr(G._graph, n, radius, 0, sample)
+                        return nx.sx.Graph(incoming_graph_data=snapGraph)
+            else:
+                snapGraph = snap.GetInEgonetAttr(G._graph, n, radius)
+                return nx.sx.Graph(incoming_graph_data=snapGraph)
+        else:
+            raise NotImplementedError
+    else:
+        raise NotImplementedError
+
+
+def draw_plot(axcm, x, y, measures, typ, measure_name, xlabel, ylabel):
 
     axcm.plot(x, y, "ro")
     axcm.plot(x, y, "g-")
@@ -133,31 +219,19 @@ def draw_plot(axcm, x, y, measures, typ, measure_name, xlabel, ylabel):
     axcm.set_ylabel(ylabel)
     axcm.set_xlabel(xlabel)
 
-
-'''
-    code currently not in use
-    datasets.append("taro_village.txt") ,small dataset
-    datasets.append("lastfm_asia.txt") ,large dataset of 117.5MB
-    datasets.append("taro_village.txt") , small dataset
-    datasets.append("lastfm_asia.txt") , large dataset of 117.5MB
-    
-'''
-
-
-
-
-
-
-
+#
+# '''
+#     code currently not in use
+#     datasets.append("taro_village.txt") ,small dataset
+#     datasets.append("lastfm_asia.txt") ,large dataset of 117.5MB
+#     datasets.append("taro_village.txt") , small dataset
+#     datasets.append("lastfm_asia.txt") , large dataset of 117.5MB
+#
+# '''
 
 # print("what is happening?")
 # if __name__ == '__main__':
 #     print ('Mod2 UnitTest!')
-
-#
-
-
-
 
     datasets = list()
     datasets.append("gplus_combined.txt")
