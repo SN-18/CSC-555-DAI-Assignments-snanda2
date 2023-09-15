@@ -360,4 +360,54 @@ def draw_plot(axcm, x, y, measures, typ, measure_name, xlabel, ylabel):
       # print("I'm testing this")
       # plt.show()
       #
+#############################################################################################################################
 
+import os
+import networkx as nx
+import matplotlib.pyplot as plt
+
+
+
+
+def cmpfun(s):
+    if s.find(".egonet") < 0:
+        return float('inf')
+    return int(s.split(".egonet")[0])
+
+cliques = {}
+k_cliques = {}
+n = 3
+for file in sorted(os.listdir(), key=cmpfun):
+    n -= 1
+    if n == 0:
+       break
+    fn = os.path.join(os.getcwd(), file)
+    graph = nx.Graph()
+    if os.path.isfile(fn) and file.find(".egonet") >= 0:
+        print(file)
+        user = int(file.split(".egonet")[0])
+
+        with open(fn, "r") as f:
+            for line in f:
+                #if line == '':
+                #    continue
+                friend, mfriends = line.split(": ")
+                mfriends = mfriends[:-1].split(" ")
+                friend = int(friend)
+                graph.add_edge(user, friend)
+                print(friend)
+
+                #print([(friend, int(x)) for x in mfriends])
+                graph.add_edges_from([(friend, int(x)) for x in mfriends if len(x) != 0])
+
+
+
+        for g in nx.algorithms.find_cliques(graph):
+            if user not in cliques:
+                cliques[user] = []
+            cliques[user].append(g)
+        
+        for g in nx.algorithms.community.label_propagation.asyn_lpa_communities(graph):
+            if user not in k_cliques:
+                k_cliques[user] = []
+            k_cliques[user].append(g)
