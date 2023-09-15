@@ -1,6 +1,6 @@
 
 #use networkx inbuilt clustering
-#kAGGLE dataset thats provided in assignment
+#kAGGLE dataset that's provided in assignment
 
 
 ######################################################################################################
@@ -15,6 +15,7 @@
 
 import networkx as nx
 G = nx.Graph()
+G1 = nx.DiGraph()
 
 # #
 # # for i in range(4,1000):
@@ -81,14 +82,15 @@ with open('0.egonet') as f:
     for line in lines:
         line = line.strip() # remove leading/trailing white spaces
 
+
         if line:
             if i == 1:
-                columns = [item.strip() for item in line.split(' ')]
+                columns = [item.strip().strip(":") for item in line.split(' ')]
                 i = i + 1
 
             else:
                 d = {} # dictionary to store file data (each line)
-                data.append([item.strip() for item in line.split(' ')])
+                data.append([item.strip().strip(":") for item in line.split(' ')])
 
 
 
@@ -99,6 +101,7 @@ with open('0.egonet') as f:
 
     for li in data:
         G.add_nodes_from([li[0] for li in data])
+        G1.add_nodes_from([li[0] for li in data])
 
     # for j in range(1, len(li)):
     #     G.add_nodes_from([li[1] for li in data])
@@ -106,11 +109,21 @@ with open('0.egonet') as f:
     edges= list()
 
     for li in data:
+        small_li = li[0]
         # n,m = li[0], li[1]
 
+        # edges.append(li[0])
+
         for j in range(1,len(li)):
+            # small_li.append(li[j])
+
+            edges.append([li[0],li[j]])
+
             G.add_edge(li[0],li[j])
             print("successfully added edge between nodes", li[0], li[j])
+
+        G1.add_edges_from(edges)
+
 
 
 
@@ -124,9 +137,10 @@ with open('0.egonet') as f:
         # print("n and m are:", n, m)
 
         # try:
-        #     # n_int = node_dict[n]
-        #     # m_int = node_dict[m]
-        #     edges.append((n,m))
+        ## n_int = node_dict[n]
+        ## m_int = node_dict[m]
+
+        #edges.append((n,m))
 
 
 
@@ -134,10 +148,10 @@ with open('0.egonet') as f:
             # G.AddEdge(n, m)
 
 
-            if G:
-                print("G is not empty")
-            else:
-                print("G is an empty Graph, something went wrong")
+        if G:
+            print("G is not empty")
+        else:
+            print("G is an empty Graph, something went wrong")
         #
         # except:
         #     print("For this edge, something happened, for now, let's debug")
@@ -145,6 +159,7 @@ with open('0.egonet') as f:
 
 
     print("Gen_obj creation")
+
     if G:
         print("here")
 
@@ -178,6 +193,34 @@ with open('0.egonet') as f:
         #     cliques[user].append(g)
         print("cliques: ", *cliques, sep=" ")
 
+        clustering_coefficients = {}
+        clustering_coefficients = nx.clustering(G1.to_undirected())
+
+        # Calculate the average clustering coefficient for the entire egonet
+        average_clustering_coefficient = nx.average_clustering(G1.to_undirected())
+
+        # Print clustering coefficients for each node
+        print("Clustering Coefficients:")
+        for node, cc in clustering_coefficients.items():
+            print(f"Node {node}: {cc}")
+
+        # Print the average clustering coefficient
+        print(f"Average Clustering Coefficient: {average_clustering_coefficient}")
+
+        clustering_coefficients = nx.clustering(G1.to_undirected())
+
+        # Calculate the average clustering coefficient for the entire egonet
+        clustering_coefficients = nx.clustering(G.to_undirected(), G.to_undirected())
+
+        # Print clustering coefficients for each node
+        print("Clustering Coefficients:")
+        for node, cc in clustering_coefficients.items():
+            print(f"Node {node}: {cc}")
+
+        # Print the average clustering coefficient
+        print(f"Average Clustering Coefficient: {average_clustering_coefficient}")
+
+        # for your egonet data.Remember to replace the egonet_edges list with your actual data.
 
         # for g in nx.algorithms.community.label_propagation.asyn_lpa_communities(G):
         #     if user not in k_cliques:
@@ -219,7 +262,8 @@ with open('0.egonet') as f:
 
 
 
-    # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
 
 # import networkx as nx
