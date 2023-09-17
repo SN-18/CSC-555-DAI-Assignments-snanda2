@@ -88,16 +88,14 @@ Or use,
 ``` python ~/path/main.py```
 
 <li>
-  
+  Download the data from the public kaggle [page](https://www.kaggle.com/competitions/learning-social-circles/overview). Download it in the same directory as your python script for ease of execution. Alternatively, one could always use absolute paths but it is cumbersome if one runs the script frequently for many runs, as we have. 
 </li>
 
 <li>
-  
+  The output is produced as shown below. The graph is constructed based on data, the absolute measures (nodes and edges), centrality measures (degree,in-betweeness and eigen), and cliques based on Networkx's percolation method, are calculated as shown. The output is then depicted for several runs, to analyze graph complexity, node rank and the average clustering coefficient to depict the overall graph complexity.
 </li>
 
-<li>
-  
-</li>
+
 
 </ul>
 
