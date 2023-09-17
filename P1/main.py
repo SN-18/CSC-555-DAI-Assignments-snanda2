@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import networkx as nx
+import random
 
 G = nx.Graph()
 G1 = nx.DiGraph()
@@ -29,7 +30,7 @@ with open('0.egonet') as f:
 
 
 
-
+    num_nodes = len(data)
     counter = 0
     node_dict = dict()
 
@@ -74,8 +75,9 @@ with open('0.egonet') as f:
 
 
     print("\n")
-    print('Number of nodes', len(G.nodes))
-    print('Number of edges', len(G.edges))
+    print("This is where I am printing edges")
+    print('Number of nodes', len(G1.nodes))
+    print('Number of edges', len(G1.edges))
 
 
     if G:
@@ -84,21 +86,43 @@ with open('0.egonet') as f:
         cliques = list(nx.find_cliques(G))
         print("Cliques in the social circle:")
 
-
-        for i, clique in enumerate(cliques, 1):
-            print(f"Clique {i}: {clique}")
+#have to debug, so commenting it out for this step
+        # for i, clique in enumerate(cliques, 1):
+        #     print(f"Clique {i}: {clique}")
 
 
         clustering_coefficients = {}
         clustering_coefficients = nx.clustering(G1.to_undirected())
+        length = dict(nx.all_pairs_shortest_path_length(G))
+
 
         # Calculate the average clustering coefficient for the entire egonet
         average_clustering_coefficient = nx.average_clustering(G1.to_undirected())
 
         # Print clustering coefficients for each node
+
         print("Clustering Coefficients:")
+        rand_idx =random.randint(0,num_nodes+1)
+        randomized_node_dict = G1.nodes.items()
+        print(randomized_node_dict)
+
+        base_node = None
+
+        for element in randomized_node_dict:
+            if rand_idx!=0:
+                rand_idx = rand_idx - 1
+            base_node = element
+
+
+        # base_node = randomized_node_dict[rand_idx]
+
+        i = 0
+        print("base_node is:",base_node)
         for node, cc in clustering_coefficients.items():
+
             print(f"Node {node}: {cc}")
+            # print("Distance between base node and current: ", length[node][base_node])
+            i = i + 1
 
         # Print the average clustering coefficient
         print(f"Average Clustering Coefficient: {average_clustering_coefficient}")
@@ -116,6 +140,23 @@ with open('0.egonet') as f:
         # Print the average clustering coefficient
         print(f"Average Clustering Coefficient: {average_clustering_coefficient}")
 
+        # Calculate Degree Centrality
+        degree_centrality = nx.degree_centrality(G1)
+        print("Degree Centrality:")
+        for node, centrality in degree_centrality.items():
+            print(f"Node {node}: {centrality}")
+
+        # Calculate Betweenness Centrality
+        betweenness_centrality = nx.betweenness_centrality(G1)
+        print("\nBetweenness Centrality:")
+        for node, centrality in betweenness_centrality.items():
+            print(f"Node {node}: {centrality}")
+
+        # Calculate Eigenvector Centrality
+        eigenvector_centrality = nx.eigenvector_centrality(G1)
+        print("\nEigenvector Centrality:")
+        for node, centrality in eigenvector_centrality.items():
+            print(f"Node {node}: {centrality}")
 
 
         elarge = [(u, v) for (u, v, d) in G.edges(data=True) ]
@@ -127,6 +168,7 @@ with open('0.egonet') as f:
         # edges
         nx.draw_networkx_edges(G, pos, edgelist=elarge,
                                width=1, edge_color='b')
+
         # nx.draw_networkx_edges(G, pos, edgelist=elarge,
         #                        width=1, alpha=0.5, edge_color='b', style='dashed')
 
