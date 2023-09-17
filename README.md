@@ -86,23 +86,23 @@ Or use,
 
 
 ## Cliques, Clustering Coefficients, Measures of Centrality and Corresponding Graphs
-<img width="1440" alt="Screenshot 2023-09-15 at 7 20 22 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/9ae515ad-8453-4a1e-a0eb-8a341ead5c0d" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 1: Lorem Ipsum</p><br>
+<img width="1440" alt="Screenshot 2023-09-15 at 7 20 22 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/9ae515ad-8453-4a1e-a0eb-8a341ead5c0d" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 1: Clique List</p><br>
 
-<img width="1440" alt="Screenshot 2023-09-15 at 7 20 19 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/792b92b1-0591-4697-9d4a-2e6071f45bf8" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 2: Lorem Ipsum</p><br>
+<img width="1440" alt="Screenshot 2023-09-15 at 7 20 19 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/792b92b1-0591-4697-9d4a-2e6071f45bf8" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 2: Clustering Coefficients for Individual Nodes</p><br>
 
-<img width="1440" alt="Screenshot 2023-09-15 at 7 20 09 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/54e51bfd-48e3-44f8-8c81-f0e4c61ad0ef" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 3: Lorem Ipsum</p><br>
-
-
-<img width="543" alt="Screenshot 2023-09-17 at 2 08 16 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/dcd7e115-0100-4eaf-b422-8257efcc0d15"> <p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
-
-<img width="544" alt="Screenshot 2023-09-17 at 2 08 24 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/49d29a41-13e6-4258-bccc-845b7ae2bff9"> <p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
+<img width="1440" alt="Screenshot 2023-09-15 at 7 20 09 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/54e51bfd-48e3-44f8-8c81-f0e4c61ad0ef" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 3: Output for Run 1</p><br>
 
 
-<img width="543" alt="Screenshot 2023-09-17 at 2 08 07 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/9e8e1882-0d57-422c-a0e5-9de92424d691"> <p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
+<img width="543" alt="Screenshot 2023-09-17 at 2 08 16 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/dcd7e115-0100-4eaf-b422-8257efcc0d15"> <p style="font-family:verdana" align='center'>Figure 5: Output for Run 2</p><br>
+
+<img width="544" alt="Screenshot 2023-09-17 at 2 08 24 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/49d29a41-13e6-4258-bccc-845b7ae2bff9"> <p style="font-family:verdana" align='center'>Figure 6: Output for Run 3</p><br>
 
 
-<img width="540" alt="Screenshot 2023-09-17 at 2 08 37 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/8c6b3d26-f84b-454f-80f6-ac663b0e6e4c"> <p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
+<img width="543" alt="Screenshot 2023-09-17 at 2 08 07 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/9e8e1882-0d57-422c-a0e5-9de92424d691"> <p style="font-family:verdana" align='center'>Figure 7: Output for Run 4</p><br>
 
-<img width="541" alt="Screenshot 2023-09-17 at 2 04 48 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/3bfe45cd-3ebe-4bff-979d-515d80ee7d4f"> <p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
+
+<img width="540" alt="Screenshot 2023-09-17 at 2 08 37 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/8c6b3d26-f84b-454f-80f6-ac663b0e6e4c"> <p style="font-family:verdana" align='center'>Figure 8: Output for Run 5</p><br>
+
+<img width="541" alt="Screenshot 2023-09-17 at 2 04 48 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/3bfe45cd-3ebe-4bff-979d-515d80ee7d4f"> <p style="font-family:verdana" align='center'>Figure 9: Output for Run 6</p><br>
 
 
