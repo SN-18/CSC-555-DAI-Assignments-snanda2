@@ -43,12 +43,44 @@ More information: [Networkx Documentation](https://networkx.org/) <br><br>
 </ul>
 
 
-## Instructions to execute
+
 
 ## Requirements
 To install all the system requirements, on a command line interface such as Terminal for mac or Powershell for Windows, run:<br>
 
 ```pip : -r requirements.txt```<br>
+
+## Instructions to execute
+
+<ul>
+
+<li>
+Check the python version downloaded from the requirements.txt code on a terminal like environment (powershell for windows), using: <br>
+  
+  ```python --version ```
+If it's python 3.X (X is an integer like 10,11,etc), proceed to the next step.
+  
+</li>
+From an IDE like Pycharm, run the green icon at the top to start execution:
+
+<br>
+Or use, 
+
+``` python ~/path/main.py```
+
+<li>
+  
+</li>
+
+<li>
+  
+</li>
+
+<li>
+  
+</li>
+
+</ul>
 
 
 ## Cliques, Clustering Coefficients, Measures of Centrality and Corresponding Graphs
