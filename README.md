@@ -92,6 +92,6 @@ Or use,
 
 <img width="1440" alt="Screenshot 2023-09-15 at 7 20 09 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/54e51bfd-48e3-44f8-8c81-f0e4c61ad0ef" width="500" height="600" style="text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 3: Lorem Ipsum</p><br>
 
-<img width="638" alt="Screenshot 2023-09-17 at 12 39 46 AM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/126bedbc-b30d-4f8a-85e4-5db3f01aa999" width=10000px height="600" style= "text-align: center;" class="center"><p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
+<img width="541" alt="Screenshot 2023-09-17 at 2 04 48 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/4db1dbae-780a-4efc-8c40-f3565e1aa361"><p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
 
 
