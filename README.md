@@ -95,3 +95,18 @@ Or use,
 <img width="541" alt="Screenshot 2023-09-17 at 2 04 48 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/4db1dbae-780a-4efc-8c40-f3565e1aa361"><p style="font-family:verdana" align='center'>Figure 4: Lorem Ipsum</p><br>
 
 
+<img width="543" alt="Screenshot 2023-09-17 at 2 08 16 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/dcd7e115-0100-4eaf-b422-8257efcc0d15"> Figure 5: Lorem Ipsum</p><br>
+
+<img width="544" alt="Screenshot 2023-09-17 at 2 08 24 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/49d29a41-13e6-4258-bccc-845b7ae2bff9"> Figure 6: Lorem Ipsum</p><br>
+
+
+<img width="543" alt="Screenshot 2023-09-17 at 2 08 07 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/9e8e1882-0d57-422c-a0e5-9de92424d691"> Figure 7: Lorem Ipsum</p><br>
+
+
+<img width="540" alt="Screenshot 2023-09-17 at 2 08 37 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/8c6b3d26-f84b-454f-80f6-ac663b0e6e4c"> Figure 8: Lorem Ipsum</p><br>
+
+<img width="541" alt="Screenshot 2023-09-17 at 2 04 48 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/3bfe45cd-3ebe-4bff-979d-515d80ee7d4f"> Figure 9: Lorem Ipsum</p><br>
+
+
+
+
