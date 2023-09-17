@@ -91,7 +91,7 @@ Or use,
 ``` python ~/path/main.py```
 
 <li>
-  Download the data from the public kaggle [page](https://www.kaggle.com/competitions/learning-social-circles/overview). Download it in the same directory as your python script for ease of execution. Alternatively, one could always use absolute paths but it is cumbersome if one runs the script frequently for many runs, as we have. 
+  Download the data from the public [kaggle](https://www.kaggle.com/competitions/learning-social-circles/overview). Download it in the same directory as your python script for ease of execution. Alternatively, one could always use absolute paths but it is cumbersome if one runs the script frequently for many runs, as we have. 
 </li>
 
 <li>
