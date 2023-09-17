@@ -3,6 +3,23 @@
 
 ## Project P1, Question 2
 Approaches used:
+<ol>
+  
+<li>
+<u> Calculation of a representative clustering metric </u>, such as average clustering coefficient:<br><br>
+<img width="128" alt="Screenshot 2023-09-17 at 2 44 28 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/63e1bd85-7d06-4a5f-969f-1ff276ee61f5">
+
+(Here the numerator is of the form C(P) and the Denominator is of the form L(p), where argument p denotes a high probability vertex in the graph, data structure.) 
+
+<br>
+</li>
+
+<li>
+<u> Centrality Measures: </u> Historically first and conceptually simplest is degree centrality, which is defined as the number of links incident upon a node (i.e., the number of ties that a node has). The degree can be interpreted in terms of the immediate risk of a node for catching whatever is flowing through the network (such as a virus, or some information). In the case of a directed network (where ties have direction), we usually define two separate measures of degree centrality, namely indegree and outdegree.  
+</li>
+
+</ol>
+
 
 For more, please refer to: [P1](https://docs.google.com/document/d/1ShYEkktabqMvfDcdxB78NUmrM36nFrTM/edit)
 
