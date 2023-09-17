@@ -55,7 +55,10 @@ More information: [Networkx Documentation](https://networkx.org/) <br><br>
 </li>
 
 
-<li>Snap.cliques.h <br><br> 
+<li>Snap.cliques.h: Snap uses the inbuilt cliques.h which uses the clique percolation technique. The clique percolation method[1] is a popular approach for analyzing the overlapping community structure of networks. The term network community (also called a module, cluster or cohesive group) has no widely accepted unique definition and it is usually defined as a group of nodes that are more densely connected to each other than to other nodes in the network. 
+More information can be found here: [CPM](https://en.wikipedia.org/wiki/Clique_percolation_method)
+  
+  <br><br> 
 </li>
 
 
