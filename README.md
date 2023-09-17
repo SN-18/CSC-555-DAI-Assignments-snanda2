@@ -4,6 +4,8 @@
 ## Project P1, Question 2
 Approaches used:
 
+For more, please refer to: [P1](https://docs.google.com/document/d/1ShYEkktabqMvfDcdxB78NUmrM36nFrTM/edit)
+
 Clustering using clique generation:
 
 Libraries used:
