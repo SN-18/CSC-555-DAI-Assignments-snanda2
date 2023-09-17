@@ -4,39 +4,43 @@
 ## Project P1, Question 2
 Approaches used:
 
-Clustering using clique generation
+Clustering using clique generation:
 
 Libraries used:
 
+<ul>
+
 <li>
+<u>Networkx:</u> NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.NetworkX is a Python language software package for the creation, manipulation, and study of the structure, dynamics, and function of complex networks. It is used to study large complex networks represented in form of graphs with nodes and edges.<br>
+  
+More information: [Networkx Documentation](https://networkx.org/) <br><br>
 
-<ol>
-<u>Networkx:</u> NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.	<br>
-NetworkX is a Python language software package for the creation, manipulation, and study of the structure, dynamics, and function of complex networks. It is used to study large complex networks represented in form of graphs with nodes and edges.<br>
+</li>
 
-<br><br>
-More information: [Networkx Documentation](https://networkx.org/)
-</ol>
-
-<ol><u>Matplotlib:</u> Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. <br><br>
-Most of the Matplotlib utilities lies under the pyplot submodule, and are usually imported under the plt alias:<br><br>
+<li><u>Matplotlib:</u> Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Most of the Matplotlib utilities lies under the pyplot submodule, and are usually imported under the plt alias:<br><br>
   
 ```import matplotlib.pyplot as plt ```<br>
   
-<u>More information:</u> [Matplotlib Documentation](https://matplotlib.org/)
-
-</ol>
-
-<ol>SNAP Package</ol>
-
-SNAP package supports large-scale graphs and networks. Graphs are data structures that can be used to describe complex abstractions such as topologies, social networks, physical phenomenon such as lattice sturctures, etc  and have a myriad applications. <br> In this context, a graph is represented as nodes with unique integer ids and directed/undirected/multiple edges between the nodes of the graph. <br> Networks are graphs with data on nodes and/or edges of the network. Data types that reside on nodes and edges are simply passed as template parameters which provides a very fast and convenient way to implement various kinds of networks with rich data on nodes and edges. <br>
-
-<u>More information:</u> [SNAP Documentation]([url](http://snap.stanford.edu/)
-
-<ol>Snap.cliques.h</ol>
-
+<u>More information:</u> [Matplotlib Documentation](https://matplotlib.org/)<br><br>
 
 </li>
+
+
+
+<li> SNAP Package: SNAP package supports large-scale graphs and networks. Graphs are data structures that can be used to describe complex abstractions such as topologies, social networks, physical phenomenon such as lattice sturctures, etc  and have a myriad applications. 
+
+<br> In this context, a graph is represented as nodes with unique integer ids and directed/undirected/multiple edges between the nodes of the graph. Networks are graphs with data on nodes and/or edges of the network. Data types that reside on nodes and edges are simply passed as template parameters which provides a very fast and convenient way to implement various kinds of networks with rich data on nodes and edges. <br>
+
+<u>More information:</u> [SNAP Documentation](http://snap.stanford.edu/) <br><br>
+
+</li>
+
+
+<li>Snap.cliques.h <br><br> 
+</li>
+
+
+</ul>
 
 
 ## Instructions to execute
