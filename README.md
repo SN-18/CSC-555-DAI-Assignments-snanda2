@@ -191,6 +191,33 @@ Or use,
 
 <img width="600" height="450" alt="Screenshot 2023-09-17 at 2 04 48 PM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/3bfe45cd-3ebe-4bff-979d-515d80ee7d4f" width="500" height="600"> <p style="font-family:verdana" align='center'>Figure 13: Output for Run 5</p><br>
 
+## Final Output
+For the given data, using a pseudo-randomizer, we got the final maximum as follows:
+
+<ul>
+
+<li>
+Maximum Degree Centrality: 0.77216<br>  
+Maximum Node Value with Highest Degree Centrality: 58<br>
+</li>
+
+<li>
+Maximum Betweeness Centrality: 0.77216<br>
+Maximum Node Value with Highest Degree Centrality: 58<br>
+</li>
+
+<li>
+Maximum Eigen Centrality: 0.77216<br>  
+Maximum Node Value with Highest Degree Centrality: 58<br>
+</li>
+
+  
+</ul>
+
+## Final Run Output
+<img width="1295" alt="Screenshot 2023-09-22 at 3 48 50 AM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/0228971f-de3c-4045-88f7-2250bf1ae53d">
+
+
 ## Troubleshooting and Further Resources
 <ol>
   <li>
