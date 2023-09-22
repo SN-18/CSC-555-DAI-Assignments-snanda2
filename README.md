@@ -215,19 +215,33 @@ Maximum Node Value with Highest Degree Centrality: 58<br>
 </ul>
 
 ## Final Run Output
-<img width="1295" alt="Screenshot 2023-09-22 at 3 48 50 AM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/0228971f-de3c-4045-88f7-2250bf1ae53d">
+<br><img width="1295" alt="Screenshot 2023-09-22 at 3 48 50 AM" src="https://github.com/SN-18/CSC-555-DAI-Assignments-snanda2/assets/83748468/0228971f-de3c-4045-88f7-2250bf1ae53d"><br>
 
+## Discussion
+<ul><li>From above, node 58 has the highest number of degree connections (indegree and outdegree), and it is on the most number of shortest routes between two nodes. However, node 137 is connected to the most number of ‘influential’ nodes. Depending on how we construe ‘important’ or ‘influential’, node 58 is quite involved within it’s network, whereas node 137 knows a high number of influential people (or a huge amount of non-influential people, which is less likelier).</li> 
+
+<li>Further Analysis and Future Scope: In this way, one can isolate nodes of most importance or most influential people, within a social
+subgraph. This problem, though seemingly simplistic, is quite complex. For example, finding a node within a subgraph that has optimal eigen centrality, and finding the combination of nodes that could form such a subgraph, is an NP-complete problem, and is intractable, in nature. It is an area of active interest, and this is one of many possible solutions. Even within this solution, a pseudo-generator is taken as the basis for calculation of centrality
+and distance measures. These two factors make this solution a highly probably and a ‘good’ solution, but to find the best solution for a universal graph structure, is a problem that is yet to be solved. <br></li>
+
+<li>One can perhaps choose a different approach like modifying the pseudo-genarator depending on sparsity, or modifying criteria for centrality measures, changing the distance measures within the overall vector space for these centrality metrics, etc, and try to optimize further and arrive at a better solution.</li><br>
+
+</ul>
 
 ## Troubleshooting and Further Resources
 <ol>
   <li>
     If you are unable to run the program, then firstly, check your system requirements. For this, quickly run:<br>
+    
+   ``` env1/bin/python -m pip freeze > requirements.txt ```
 
-    ```pip freeze requirements.txt```
-
-  <br> To validate if the requirements are installed, one can manually check version for any requirement, using:<br>
+  <br> 
   
-  ```requirement_name --version ``` <br>
+  To validate if the requirements are installed, one can manually check version for any requirement, using:<br>
+  
+  ``` requirement_name --version ``` 
+  
+  <br>
  
   </li>
 
