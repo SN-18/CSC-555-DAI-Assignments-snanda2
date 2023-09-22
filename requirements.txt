@@ -23,7 +23,6 @@ pandas==2.0.3
 Pillow==10.0.0
 protobuf==3.20.3
 psutil==5.9.5
-Pygments @ file:///private/tmp/pygments-20230630-5530-1s8evfm/Pygments-2.15.1
 pyparsing==3.0.9
 python-dateutil==2.8.2
 python-slugify==8.0.1
